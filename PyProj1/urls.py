@@ -18,7 +18,11 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib import admin
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
-    path('', include('GamifApp.urls'))
+    path('admin/', admin.site.urls),
+    path('', include('GamifApp.urls')),
+path('logout/', LogoutView.as_view(), name='logout'),
 ]
