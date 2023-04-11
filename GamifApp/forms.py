@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class RegistrationForm(UserCreationForm):
-    """
+    """'
     Override the default user creation form by
     adding the email as a required field
     """
